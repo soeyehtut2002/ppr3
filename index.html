@@ -1,161 +1,137 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<title>Exclusive Fans</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OnlyFans</title>
 <style>
-
 body{
-
-font-family:Arial;
-
-background:#0f172a;
-
-color:white;
-
-text-align:center;
-
 margin:0;
-
-}
-
-header{
-
-background:#111827;
-
-padding:20px;
-
-font-size:28px;
-
-font-weight:bold;
-
-}
-
-.container{
-
-margin-top:60px;
-
-}
-
-.profile{
-
-width:150px;
-
-border-radius:50%;
-
-}
-
-.fans{
-
-margin:20px;
-
-font-size:22px;
-
-color:#22c55e;
-
-}
-
-button{
-
-background:#00aff0;
-
-border:none;
-
-padding:15px 35px;
-
-font-size:18px;
-
-border-radius:8px;
-
-cursor:pointer;
-
+font-family:Arial, Helvetica, sans-serif;
+background:#0f172a;
 color:white;
-
+text-align:center;
 }
-
+header{
+background:#111827;
+padding:20px;
+}
+header h1{
+color:#00bfff;
+font-size:40px;
+}
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+.card{
+background:#1f2937;
+border-radius:12px;
+padding:20px;
+margin:20px;
+display:inline-block;
+width:250px;
+}
+.card img{
+width:100%;
+border-radius:10px;
+}
+.card h3{
+margin-top:10px;
+}
+button{
+background:#00bfff;
+border:none;
+padding:12px 25px;
+border-radius:8px;
+cursor:pointer;
+color:white;
+margin-top:10px;
+}
 button:hover{
-
 background:#0284c7;
-
 }
-
 .loading{
-
 display:none;
-
 font-size:24px;
-
 margin-top:30px;
-
 }
-
 .prank{
-
 display:none;
-
 font-size:30px;
-
-color:#f87171;
-
+color:#ff4d4d;
 margin-top:30px;
-
+}
+.fans{
+font-size:22px;
+color:#22c55e;
+margin-top:10px;
+}
+footer{
+margin-top:40px;
+padding:20px;
+background:#111827;
 }
 </style>
 </head>
 <body>
 <header>
-
-ONLYFANS PREMIUM
-</header>
-<div class="container">
-<img class="profile" src="https://i.imgur.com/8Km9tLL.png">
-<h2>Exclusive Creator</h2>
+<h1>OnlyFans</h1>
+<p>The best fans in the world 🌬️</p>
 <div class="fans">
-
-🔥 Fans: <span id="fanCount">12483</span>
+🔥 Fans online: <span id="fanCount">12483</span>
 </div>
 <button onclick="subscribe()">Subscribe $9.99</button>
 <div class="loading" id="loading">
-
-Processing Payment...
+Processing payment...
 </div>
 <div class="prank" id="prank">
-
-😂 GOT YOU! PRANK WEBSITE!
+😂 GOT YOU! This website only sells fans!
+</div>
+</header>
+<div class="container">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1618941716939-553df3c6c278?w=500">
+<h3>Stand Fan</h3>
+<p>Strong wind and elegant design.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1568392816241-44d223d4d490?w=500">
+<h3>Modern Fan</h3>
+<p>Quiet and stylish.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581475802168-52bf225f742e?w=500">
+<h3>Old Fan</h3>
+<p>Classic design.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1645566372597-a6c10c07c393?w=500">
+<h3>Personal Fan</h3>
+<p>Small but powerful.</p>
 </div>
 </div>
+<footer>
+<p>© 2026 OnlyFans – We love fans ❤️</p>
+</footer>
 <script>
-
 let fans = 12483;
-
 setInterval(()=>{
-
-fans += Math.floor(Math.random()*3);
-
+fans += Math.floor(Math.random()*4);
 document.getElementById("fanCount").innerText = fans;
-
 },1500);
 
-
 function subscribe(){
-
 document.getElementById("loading").style.display="block";
-
 setTimeout(()=>{
-
 document.getElementById("loading").innerText="Charging your bank account...";
-
 },2000);
-
 setTimeout(()=>{
-
 document.getElementById("loading").style.display="none";
-
 document.getElementById("prank").style.display="block";
-
 },4000);
-
 }
 </script>
 </body>
 </html>
- 
